@@ -8,7 +8,7 @@ int main(int inArgCount, char* inArgs[])
 	int returnCode = 0;
 
 	{
-		lightfoot::Application app;
+		app::Application app;
 		returnCode = app.Run();
 	}
 

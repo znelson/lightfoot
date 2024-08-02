@@ -8,20 +8,21 @@
 struct SDL_Window;
 struct SDL_Renderer;
 
-namespace lightfoot
+namespace app
 {
 
 class Application final
 {
 public:
 	Application();
+
 	~Application();
 
 	int Run();
 
 private:
-	SDL_Window *mWindow {nullptr};
-	SDL_Renderer *mRenderer {nullptr};
+	SDL_Window *mWindow{nullptr};
+	SDL_Renderer *mRenderer{nullptr};
 };
 
-}	// namespace lightfoot
+}    // namespace app

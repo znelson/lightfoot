@@ -40,8 +40,9 @@ void RendererInfo::Print() const
 		std::cout << formatDetail;
 	}
 
-	std::cout << "Renderer max texture size: " << mInfo.max_texture_width << " x " << mInfo.max_texture_height << std::endl;
+	std::cout << "Renderer max texture size: " << mInfo.max_texture_width << " x " << mInfo.max_texture_height
+			  << std::endl;
 	std::cout << std::endl;
 }
 
-}	// namespace debug
+}    // namespace debug

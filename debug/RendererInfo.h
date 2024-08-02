@@ -12,7 +12,7 @@ namespace debug
 class RendererInfo
 {
 public:
-	RendererInfo(SDL_Renderer* inRenderer);
+	RendererInfo(SDL_Renderer *inRenderer);
 
 	void Print() const;
 
@@ -20,4 +20,4 @@ private:
 	SDL_RendererInfo mInfo;
 };
 
-}	// namespace debug
+}    // namespace debug

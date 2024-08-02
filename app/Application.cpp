@@ -5,9 +5,10 @@
 #include "Application.h"
 #include "SDL.h"
 
+#include "debug/FPSOverlay.h"
 #include "debug/RendererInfo.h"
 
-namespace lightfoot
+namespace app
 {
 namespace
 {
@@ -43,6 +44,11 @@ Application::~Application()
 
 int Application::Run()
 {
+#ifndef NDEBUG
+	SDL_Color fpsColor = FC_MakeColor(255, 108, 0, 255);
+	debug::ui::FPSOverlay fps{std::move(fpsColor), mRenderer};
+#endif
+
 	bool alive = true;
 	while (alive)
 	{
@@ -58,9 +64,14 @@ int Application::Run()
 				}
 			}
 		}
+
+		fps.Update();
+		fps.Draw(mRenderer);
+
+		SDL_RenderPresent(mRenderer);
 	}
 
 	return 0;
 }
 
-}    // namespace lightfoot
+}    // namespace app

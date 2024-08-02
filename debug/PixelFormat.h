@@ -12,10 +12,10 @@ namespace debug
 
 std::string GetTextureFormatDetailString(
 	Uint32 inTextureFormat,
-	const std::string& inIndent = std::string());
+	const std::string &inIndent = std::string());
 
 std::string GetPixelFormatDetailString(
-	SDL_PixelFormat* inPixelFormat,
-	const std::string& inIndent = std::string());
+	SDL_PixelFormat *inPixelFormat,
+	const std::string &inIndent = std::string());
 
-}	// namespace debug
+}    // namespace debug

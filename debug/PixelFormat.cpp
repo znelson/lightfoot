@@ -225,11 +225,11 @@ static std::string GetPixelLayoutString(
 	return "N/A";
 }
 
-}	// anonymous namespace
+}    // anonymous namespace
 
 std::string GetTextureFormatDetailString(
 	Uint32 inTextureFormat,
-	const std::string& inIndent)
+	const std::string &inIndent)
 {
 	std::stringstream stream;
 	stream << inIndent << "Texture format: " << inTextureFormat << std::endl;
@@ -262,10 +262,10 @@ std::string GetTextureFormatDetailString(
 }
 
 std::string GetPixelFormatDetailString(
-	SDL_PixelFormat* inPixelFormat,
-	const std::string& inIndent)
+	SDL_PixelFormat *inPixelFormat,
+	const std::string &inIndent)
 {
 	return GetTextureFormatDetailString(inPixelFormat->format, inIndent);
 }
 
-}	// namespace debug
+}    // namespace debug
