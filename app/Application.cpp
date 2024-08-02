@@ -65,6 +65,9 @@ int Application::Run()
 			}
 		}
 
+		SDL_SetRenderDrawColor(mRenderer, 10, 20, 30, 255);
+		SDL_RenderClear(mRenderer);
+
 		fps.Update();
 		fps.Draw(mRenderer);
 
